@@ -11,4 +11,4 @@ Pass: 12artc
 OvniC2
 Ipstresser
 Stresser
-Too stresser 
+Too stresser #Botnet
