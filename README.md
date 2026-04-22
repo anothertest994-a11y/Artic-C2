@@ -7,3 +7,8 @@ Wait ti connect c2
 Free Credentials
 User: artixfree12
 Pass: 12artc
+
+OvniC2
+Ipstresser
+Stresser
+Too stresser 
