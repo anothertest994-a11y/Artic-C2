@@ -7,11 +7,13 @@ Wait ti connect c2
 Free Credentials
 User: artixfree12
 Pass: 12artc
-How to ezexute?
-Clone in your home terminal (Linux, Vps, Termux)
-https://github.com/anothertest994-a11y/Artic-C2
-Use for connect c2:
+# Installation:
+```sh
+1. Clone repo
+git clone https://github.com/anothertest994-a11y/Artic-C2
+2.EXECUTE CMD
 sh runcosmic.sh
+3. ¡Use free Attacks!
 OvniC2
 Ipstresser
 Stresser
